@@ -13,6 +13,7 @@ import { Gym } from './types/type.gym';
 import { GymDetails } from './types/type.gym-details';
 import { Credentials } from './types/type.login';
 import { MembershipType } from './types/type.membership-type';
+import { ReserveType } from './types/type.reserve';
 
 @Injectable({
   providedIn: 'root',
@@ -134,4 +135,13 @@ export class SupabaseService {
     }
     return data;
   }
+
+  async reserve(classId: number, userId: number, reservationTime: string) : Promise<ReserveType[]>{
+  const { data, error } = await this.supabase
+  .from('reservation_transactions')
+  .insert([
+    { class_id: classId, user_id: userId, reservation_time: reservationTime, credits_used: 0},
+  ]);
+  return data;
+}
 }

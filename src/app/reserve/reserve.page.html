@@ -6,11 +6,16 @@
 
 <ion-content>
   ClassId: {{classId}}.
+  <br>
   <label for="time-select">Choose a time:</label>
 
-<select name="times" id="time-select">
-    <option value="">--Please choose an option--</option>
-    <option value="dog">7pm</option>
-    <option value="cat">8pm</option>
-</select>
+  <form>
+    <select name="times" id="time-select">
+        <option value="">Please choose an option--</option>
+        <option value="dog">7pm</option>
+        <option value="cat">8pm</option>
+    </select>
+    <br>
+    <button (click)="makeReservation(2, 2, 88)">Submit</button>
+</form>
 </ion-content>
