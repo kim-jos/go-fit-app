@@ -21,6 +21,7 @@ export class GymDetailsPage implements OnInit {
   async ngOnInit() {
     this.id = this.route.snapshot.params.id;
     this.gymDetails = await this.supabase.getGymDetails(this.id);
+
   }
 
   setOpen(isOpen: boolean) {

@@ -26,15 +26,17 @@
     <ion-card-content> {{gymDetails.description}} </ion-card-content>
   </ion-card>
 
+
   <!-- reservation modal -->
   <!-- reservation modal -->
   <!-- reservation modal -->
-  <ion-button expand="block" (click)="setOpen(true)">예약하기</ion-button>
-  <ion-modal [isOpen]="isModalOpen">
+  <ion-button routerLink="/reserve/{{gymDetails.id}}" >예약하기 Reserve</ion-button>
+  <!--<ion-modal [isOpen]="isModalOpen">
     <ng-template>
       <ion-header>
         <ion-toolbar>
           <ion-title>예약하기</ion-title>
+          {{gymDetails.name}}
           <ion-buttons slot="end">
             <ion-button (click)="setOpen(false)">닫기</ion-button>
           </ion-buttons>
@@ -49,5 +51,5 @@
         </p>
       </ion-content>
     </ng-template>
-  </ion-modal>
+  </ion-modal>-->
 </ion-content>

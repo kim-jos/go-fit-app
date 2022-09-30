@@ -30,6 +30,14 @@ const routes: Routes = [
     redirectTo: 'gym',
     pathMatch: 'full',
   },
+  {
+    path: 'reserve',
+    loadChildren: () => import('./reserve/reserve.module').then( m => m.ReservePageModule)
+  },
+  {
+    path: 'reserve/:classId',
+    loadChildren: () => import('./reserve/reserve.module').then( m => m.ReservePageModule)
+  },
 ];
 @NgModule({
   imports: [

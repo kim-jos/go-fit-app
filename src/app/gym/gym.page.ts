@@ -20,14 +20,14 @@ export class GymPage implements OnInit {
     this.gymList = await this.supabase.getGyms();
   }
 
-  navigateToGymDetails(id: number) {
-    // const params: NavigationExtras = {
-    //   queryParams: { id },
-    // };
-    alert(id);
-    this.router.navigate(['gym-details'], {
-      queryParams: { id },
-      queryParamsHandling: 'merge',
-    });
-  }
+  // navigateToGymDetails(id: number) {
+  //   // const params: NavigationExtras = {
+  //   //   queryParams: { id },
+  //   // };
+  //   alert(id);
+  //   this.router.navigate(['gym-details'], {
+  //     queryParams: { id },
+  //     queryParamsHandling: 'merge',
+  //   });
+  // }
 }
