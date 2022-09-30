@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>멤버십 구매</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">멤버십 구매</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-card *ngFor="let membership of membershipTypes" button="true">
+      <ion-card-header>
+        <ion-card-title> {{membership.type}} </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content> {{membership.price}}원 </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

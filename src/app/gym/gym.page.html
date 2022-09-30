@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> 운동시설 </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">운동시설</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-card *ngFor="let gym of gymList" button="true" routerLink="{{gym.id}}">
+      <!-- (click)="navigateToGymDetails(1)" -->
+      <img src="{{gym.image}}" />
+      <ion-card-header>
+        <ion-card-title> {{ gym.name }} </ion-card-title>
+        <ion-card-subtitle>{{gym.exercise_type}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content> {{gym.description}} </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

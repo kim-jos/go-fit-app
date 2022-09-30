@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  // constructor(private supabase: SupabaseService, private router: Router) {
+  //   this.supabase.authChanges((_, session) => {
+  //     console.log(`session: ${session}`);
+  //     if (session?.user) {
+  //       this.router.navigate(['/account']);
+  //     }
+  //   });
+  // }
 }
